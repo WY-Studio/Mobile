@@ -1,13 +1,17 @@
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity } from "react-native";
 
-export function AppleLoginButton() {
+export function AppleLoginButton({ onPress }: { onPress: () => void }) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      activeOpacity={0.5}
+      onPress={onPress}
+    >
       <Image
         source={require("@assets/images/logos/apple/apple-logo.png")}
         style={styles.icon}
       />
-    </View>
+    </TouchableOpacity>
   );
 }
 

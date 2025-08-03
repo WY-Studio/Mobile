@@ -6,8 +6,16 @@ import { AppleLoginButton, GoogleLoginButton } from "@components";
 export default function IndexScreen() {
   return (
     <View style={styles.container}>
-      <AppleLoginButton />
-      <GoogleLoginButton />
+      <AppleLoginButton
+        onPress={() => {
+          console.log("Apple Login");
+        }}
+      />
+      <GoogleLoginButton
+        onPress={() => {
+          console.log("Google Login");
+        }}
+      />
     </View>
   );
 }
